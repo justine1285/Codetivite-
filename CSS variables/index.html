@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fav.farm/✅">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS Variables and JS</title>
+</head>
+<body>
+    <h1>Update CSS variables with <span class="hl">JS</span></h1>
+
+    <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="100" data-sizing="px">
+
+        <label for="blur">Blur:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="color">Base Color</label>
+        <input type="color" id="base" name="base" value="#ffc600">
+
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" name="brightness" value="100" min="0" max="200" data-sizing="%"><br>
+
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" name="contrast" value="100" min="0" max="200" data-sizing="%">
+
+        <label for="opacity">Opacity:</label>
+        <input type="range" id="opacity" name="opacity" value="100" min="0" max="200" data-sizing="%">
+
+        <label for="saturate">Saturation:</label>
+        <input type="range" id="saturate" name="saturate" value="100" min="0" max="200" data-sizing="%">
+
+        <label for="upload">Upload file:</label>
+        <input type="file" accept="image/*" id="upload">
+        <p class="warning">please upload a valid image file</p>
+    </div>
+
+    <img class="img" id="preview" src="pexels-fecundap6-359989.jpg">
+
+    <button class="download">Download Image</button>
+
+    <!-- hidden canvas to capture download -->
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
