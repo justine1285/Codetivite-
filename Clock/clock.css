@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    animation: slideshow 20s infinite;
+    font-family: sans-serif
+}
+
+@keyframes slideshow {
+    0% { background-image: url('images/images.jpeg'); }
+    33% { background-image: url('images/pexels-fecundap6-359989.jpg'); }
+    66% { background-image: url('images/images 2.jpeg'); }
+    100% { background-image: url('images/images 1.jpeg'); }
+}
+
+.clock {
+    width: 25rem;
+    height: 25rem;
+    border: 20px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+    0 0 0 4px rgba(0,0,0,0.1),
+    inset 0 0 0 3px #EFEFEF,
+    inset 0 0 10px black,
+    0 0 10px rgba(0,0,0,0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+    cursor: pointer;
+}
+
+.hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.clock-time {
+    transform: translateX(30%);
+    font-size: 100px;
+    font-weight: 700;
+    color: white;
+    display: none;
+    opacity: 0;
+    transition: opacity 120s ease;
+}
